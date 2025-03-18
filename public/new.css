@@ -1,0 +1,77 @@
+/* 🌿 Background similar to WhatsApp theme */
+body {
+    font-family: Arial, sans-serif;
+    background: #dcf8c6; /* WhatsApp-like greenish background */
+    color: #333;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 📦 Form Container Styling */
+.form-container {
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 40px 50px;
+    width: 400px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* 💚 Form Title */
+h3 {
+    font-size: 24px;
+    color: #128c7e;  /* WhatsApp green */
+    margin-bottom: 20px;
+}
+
+/* 📝 Input and Textarea Styling */
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border: 1px solid #25d366; /* Green border on focus */
+    box-shadow: 0 0 8px rgba(37, 211, 102, 0.3);
+}
+
+/* 💥 Button Styling */
+button {
+    background: #25d366; /* WhatsApp green */
+    color: #fff;
+    border: none;
+    padding: 12px 30px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    font-size: 16px;
+}
+
+button:hover {
+    background: #128c7e; /* Darker green on hover */
+    transform: scale(1.1);
+}
+
+/* 🟢 Responsive Design */
+@media (max-width: 600px) {
+    .form-container {
+        width: 90%;
+        padding: 20px;
+    }
+}

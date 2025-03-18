@@ -1,0 +1,87 @@
+/* 🌿 WhatsApp-like Background */
+body {
+    font-family: Arial, sans-serif;
+    background: #dcf8c6; /* WhatsApp light green */
+    color: #333;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 📦 Form Container */
+form {
+    background: #fff;
+    padding: 40px 50px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 450px;
+    transition: 0.3s ease-in-out;
+    text-align: center;
+}
+
+form:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* 💚 Header Styling */
+h3 {
+    font-size: 24px;
+    color: #128c7e;  /* WhatsApp green */
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* 📄 Paragraph Styling */
+p {
+    font-size: 16px;
+    color: #555;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* 📝 Textarea Styling */
+textarea {
+    width: 100%;
+    height: 150px;
+    padding: 15px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    resize: none;
+}
+
+textarea:focus {
+    outline: none;
+    border: 1px solid #25d366; /* Green border on focus */
+    box-shadow: 0 0 8px rgba(37, 211, 102, 0.3);
+}
+
+/* 💥 Save Button Styling */
+button {
+    background: #25d366;  /* WhatsApp green */
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: #128c7e; /* Darker green on hover */
+    transform: scale(1.1);
+}
+
+/* 🟢 Responsive Design */
+@media (max-width: 600px) {
+    form {
+        width: 90%;
+        padding: 20px;
+    }
+}

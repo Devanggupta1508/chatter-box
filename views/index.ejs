@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chatterbox</title>
+    <link rel="stylesheet" href="/index.css">
+</head>
+<body>
+    <div class="chat-container">
+        <h3>Chatter box</h3>
+
+        <% for(let chat of chats) { %>
+            <div class="chat <%=(chat.from === "You") ? 'sent' : 'received'%>">
+                <p><strong>From:</strong> <%= chat.from %></p>
+
+                <div class="msg">
+                    <p> <%= chat.msg %> </p>
+
+                    <div class="buttons">
+                        <form method="GET" action="/chats/<%= chat._id %>/edit">
+                            <button>Edit</button>
+                        </form>
+
+                        <form method="POST" action="/chats/<%= chat._id %>?_method=DELETE">
+                            <button>Delete</button>
+                        </form>
+                    </div>
+                </div>
+
+                <p><strong>Received by:</strong> <%= chat.to %></p>
+                <br>
+
+                <!-- Created At -->
+                <p><strong>Created At:</strong> <%= chat.createdAt.toLocaleString() %></p>
+
+                <!-- Updated At: Sirf tab dikhao jab updated ho -->
+                <% if (chat.createdAt.getTime() !== chat.updatedAt.getTime()) { %>
+                    <p><strong>Updated At:</strong> <%= chat.updatedAt.toLocaleString() %></p>
+                <% } %>
+            </div>
+        <% } %>
+
+        <form method="post" action="/chats/new">
+            <button class="Add_btn">+</button>
+        </form>
+    </div>
+</body>
+</html>
